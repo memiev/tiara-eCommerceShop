@@ -1,2 +1,2 @@
 # tiara-eCommerceShop
-Complete React Developer Course for E-commerce app ( Redux, Hooks, GraphQL, Firebase)
+Complete React app for E-commerce ( Redux, Hooks, GraphQL, Firebase)
