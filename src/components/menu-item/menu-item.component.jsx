@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import './menu-item.styles.scss';
 
 // we have access to history because of the HOC withRouter().
-const MenuItem = ({ title, imageUrl, size,history,linkUrl, match }) => (
+const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
   <div
     className={`${size} menu-item`}
     onClick={() => history.push(`${match.url}${linkUrl}`)}
