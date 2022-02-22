@@ -1,6 +1,5 @@
 import React from 'react';
-import { MenuItem } from '../components/menu-item/menu-item.component';
-
+import MenuItem from '../components/menu-item/menu-item.component';
 import './directory.styles.scss';
 
 class Directory extends React.Component {
@@ -47,8 +46,8 @@ class Directory extends React.Component {
   render() {
     return (
       <div className="directory-menu">
-        {this.state.section.map(({ title, imageUrl, id, size }) => (
-          <MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/>
+        {this.state.section.map(({ id, ...otherSectionProps }) => (
+          <MenuItem key={id} {...otherSectionProps} />
         ))}
       </div>
     );
@@ -56,3 +55,7 @@ class Directory extends React.Component {
 }
 
 export default Directory;
+
+//ES6 spread trick is equivalent to this, because of the exact same names:
+// this.state.section.map(({ title, imageUrl, id, size, linkUrl })
+// <MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/>
